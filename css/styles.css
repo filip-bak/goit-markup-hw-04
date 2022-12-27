@@ -285,6 +285,28 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* | CLIENTS */
+.client__gird {
+  display: flex;
+  flex-direction: column;
+}
+.client__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.client__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
 /* || FOOTER */
 .footer {
   background-color: var(--bgcolor-dark);
