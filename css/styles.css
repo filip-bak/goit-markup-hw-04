@@ -86,15 +86,15 @@ ul {
 }
 
 /* || UTILITY CLASSES */
-.center {
-  text-align: center;
-}
 .container {
   margin: 0 auto;
   max-width: 1200px;
 }
 .section {
   padding: 94px 0;
+}
+.center {
+  text-align: center;
 }
 
 /* || PSEUDO CLASSES */
@@ -110,27 +110,25 @@ ul {
 .banner__button:focus-visible {
   background-color: var(--bgcolor-button-primary-hover);
 }
+
 /* links */
 .link--hover:hover,
 .link--hover:focus {
   color: var(--font-color-hover);
 }
+
 /* clients */
-.client__item:hover,
-.client__item:hover .icon {
+.client__link:hover,
+.client__link:focus {
   --color4: #2196f3;
-  border-color: var(--border-client-item-hover);
-}
-/* need fix */
-.contact__item:hover .contact__svg {
-  --color1: #2196f3;
 }
 
 /* social */
-.social__background:hover {
-  background-color: var(--bgcolor-social-hover);
+.social__logo:hover {
   --color4: var(--font-color-social-hover);
+  background-color: var(--bgcolor-social-hover);
 }
+
 /* || General */
 body {
   margin: 0 auto;
@@ -144,9 +142,10 @@ body {
 
 /* || HEADER */
 .header {
-  padding: 24px 0;
-
   border-bottom: var(--border-header);
+}
+.header.section {
+  padding: 24px 0;
 }
 
 /* | LOGO */
@@ -199,6 +198,12 @@ body {
 }
 .contact__link {
   color: var(--font-color-contact-header);
+}
+.contact__svg {
+  display: flex;
+}
+.contact__item:hover {
+  --color1: var(--font-color-hover);
 }
 
 /* || MAIN */
@@ -321,22 +326,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 10px;
 }
-.social__background {
+
+.social__logo {
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: 44px;
   height: 44px;
-
   border-radius: 50%;
-}
-.social__background a {
-  display: flex;
-  align-items: center;
 }
 
 /* | CLIENTS */
@@ -347,7 +347,7 @@ body {
 
   gap: 30px;
 }
-.client__item {
+.client__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,9 +357,7 @@ body {
 
   border: var(--border-client-item);
   border-radius: 4px;
-  cursor: pointer;
 }
-
 /* || FOOTER */
 .footer {
   background-color: var(--bgcolor-dark);
