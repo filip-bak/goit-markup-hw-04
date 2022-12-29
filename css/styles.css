@@ -88,6 +88,8 @@ ul {
   --shadow-button-primary: 0px 4px 4px 0px #00000026;
   --shadow-button-menu-hover: 0px 2px 2px 0px #0000001f,
     0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
+  --shadow-portfolio-card-item-hover: 1px 4px 6px 0px #00000029,
+    0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
 }
 
 /* || UTILITY CLASSES */
@@ -107,7 +109,7 @@ ul {
 /* || PSEUDO CLASSES */
 /* buttons */
 .hover:hover,
-.hover:focus-visible {
+.hover:focus {
   color: var(--font-color-button-secondary-hover);
   background-color: var(--bgcolor-button-secondary-hover);
 
@@ -455,12 +457,10 @@ body {
 
   margin-bottom: 50px;
 }
-
 .menu__list {
   display: flex;
   gap: 8px;
 }
-
 .menu__button {
   padding: 6px 22.5px;
 
@@ -468,7 +468,6 @@ body {
   border-radius: 4px;
   background-color: var(--bgcolor-button-secondary);
 }
-
 .button__text--secondary {
   font-size: 16px;
   font-weight: 500;
@@ -484,15 +483,19 @@ body {
   align-items: center;
   gap: 30px;
 }
-
+.card__item {
+  transition: box-shadow 350ms ease-out;
+}
+.card__item:hover {
+  box-shadow: var(--shadow-portfolio-card-item-hover);
+}
 .card__info {
   padding: 20px 0 20px 24px;
 
-  border-left: var(--border-porfolio-items);
-  border-right: var(--border-porfolio-items);
-  border-bottom: var(--border-porfolio-items);
+  border-left: var(--border-porfolio-card-item);
+  border-right: var(--border-porfolio-card-item);
+  border-bottom: var(--border-porfolio-card-item);
 }
-
 .card__title {
   margin-bottom: 4px;
 
@@ -501,7 +504,6 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-
 .card__description {
   color: var(--font-color-p);
   font-size: 1rem;
