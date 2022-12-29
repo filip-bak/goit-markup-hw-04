@@ -242,11 +242,10 @@ body {
 /* || MAIN */
 .banner {
   color: var(--font-color-secondary);
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/index/banner/main-banner.jpg);
+  background-image: url(../images/index/banner/main-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .banner.section {
   padding: 22.728vh 0; /* 200px */
