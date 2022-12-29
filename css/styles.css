@@ -38,9 +38,11 @@ ul {
   --font-color-contact-header: #757575;
   --font-color-contact-footer: #ffffff99;
   --font-color-street-footer: #fff;
+  --font-color-title-footer: #fff;
 
   --font-color-hover: #2196f3;
 
+  --font-color-social-footer: #fff;
   --font-color-social-hover: #fff;
 
   /* | LOGO COLORS*/
@@ -65,6 +67,8 @@ ul {
   --bgcolor-team: #fff;
 
   --bgcolor-social-hover: #2196f3;
+  --bgcolor-social-footer: #ffffff1a;
+  --bgcolor-social-footer-hover: #2196f3;
 
   /* | BUTTONS BACKGROUND */
   --bgcolor-button-primary: #2196f3;
@@ -142,6 +146,14 @@ ul {
 .social__logo:hover {
   --color4: var(--font-color-social-hover);
   background-color: var(--bgcolor-social-hover);
+}
+.footer .social__logo:hover {
+  background-color: var(--bgcolor-social-footer-hover);
+}
+
+/* cards */
+.card__item:hover {
+  box-shadow: var(--shadow-portfolio-card-item-hover);
 }
 
 /* || General */
@@ -230,11 +242,15 @@ body {
 /* || MAIN */
 .banner {
   color: var(--font-color-secondary);
-  background-color: var(--bgcolor-dark);
-  padding: 21.4vh 0;
-  /* 200px */
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index/banner/main-banner.jpg);
 }
-
+.banner.section {
+  padding: 22.728vh 0; /* 200px */
+}
 /* | TITLE */
 .title--primary {
   margin-bottom: 30px;
@@ -410,17 +426,37 @@ body {
 .footer {
   background-color: var(--bgcolor-dark);
 }
-
-.footer__grid {
-  display: flex;
-}
-
 .footer.section {
   padding: 60px 0;
 }
-
 .footer .logo--secondary {
   color: var(--font-color-logo-secondary-light);
+}
+.footer__grid {
+  display: flex;
+  align-items: baseline;
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 70px;
+}
+.footer__item:nth-child(2) {
+  margin-right: 78px;
+}
+.footer__title {
+  margin-bottom: 20px;
+
+  color: var(--font-color-title-footer);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+}
+.footer .social__logo {
+  background-color: var(--bgcolor-social-footer);
+  --color4: var(--font-color-social-footer);
 }
 
 /* | ADDRESS */
@@ -486,9 +522,7 @@ body {
 .card__item {
   transition: box-shadow 350ms ease-out;
 }
-.card__item:hover {
-  box-shadow: var(--shadow-portfolio-card-item-hover);
-}
+
 .card__info {
   padding: 20px 0 20px 24px;
 
